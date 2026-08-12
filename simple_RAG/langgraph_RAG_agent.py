@@ -20,7 +20,7 @@ llm = ChatOpenAI(model='gpt-4o-mini', temperature=0)
 embeddings = OpenAIEmbeddings(model='text-embedding-3-small')
 
 # loading the document
-pdf_path = Path(__file__).parent / "rag_knowledge_base_document.pdf"
+pdf_path = Path(__file__).parent / "rag_knowledge_base.pdf"
 if os.path.exists(pdf_path):
     raise FileNotFoundError(f'PDF file not found : {pdf_path}')
 pdf_loader = PyPDFLoader(pdf_path)
